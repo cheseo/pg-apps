@@ -11,12 +11,12 @@ pipeline {
 			dir("/home/public/cloud-scripts/week-7/jenkins-terra"){
 			sh '''
 			git pull
-			terraform init
-			terraform plan
+			terraform init -no-color
+			terraform plan -no-color
 			'''
 			input message: "Continue?"
 			sh '''
-			terraform apply -auto-approve
+			terraform apply -auto-approve -no-color
 			'''
 			}
 		}
