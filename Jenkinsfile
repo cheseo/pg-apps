@@ -2,8 +2,8 @@ pipeline {
 	agent any
 	stages {
 		stage ('all') {
-		dir("/home/public/cloud-scripts/week-7/jenkins-terra"){
-			steps {
+		steps {
+			dir("/home/public/cloud-scripts/week-7/jenkins-terra"){
 			sh '''
 			git pull
 			terraform init
